@@ -12,9 +12,11 @@
   <title>Aryan Saini — Portfolio</title>
   <link rel="canonical" href="https://aryansx.github.io/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23111111' d='M0 0h32v32H0z'/%3E%3Cpath fill='%23ff4b45' d='M5 5h11v11H5zM16 16h11v11H16z'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script src="motion.js?v=2" defer></script>
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header page-width">
     <a class="wordmark" href="#main" aria-label="Aryan Saini, home"><span class="mark" aria-hidden="true"></span>ARYAN SAINI<span class="accent">.</span></a>
@@ -28,7 +30,8 @@
   <main id="main">
     <section class="hero page-width" aria-labelledby="hero-title">
       <div class="hero-top"><span class="eyebrow">UNDERGRADUATE / COMPUTER SCIENCE &amp; AI</span><span class="eyebrow">@ARYANSX</span></div>
-      <h1 id="hero-title">ARYAN<span class="surname">SAINI<span class="accent">.</span></span></h1>
+      <div class="hero-art" aria-hidden="true"><div class="art-frame"></div><div class="art-grid"><span></span><span></span><span></span><span></span></div></div>
+      <h1 id="hero-title"><span class="hero-line"><span>ARYAN</span></span><span class="hero-line surname"><span>SAINI<span class="accent">.</span></span></span></h1>
       <div class="hero-bottom">
         <p>I love to build things as a solution to problems I encounter.</p>
         <a class="button" href="#work">Explore my work</a>
@@ -36,9 +39,9 @@
     </section>
 
     <section class="work page-width" id="work" aria-labelledby="work-title">
-      <div class="section-heading"><h2 id="work-title">SELECTED WORK</h2><span class="eyebrow">01 — 03</span></div>
+      <div class="section-heading" data-reveal><h2 id="work-title">SELECTED WORK</h2><span class="eyebrow">01 — 03</span></div>
 
-      <article class="featured-project" aria-labelledby="chemspec-title">
+      <article class="featured-project" aria-labelledby="chemspec-title" data-reveal data-interactive>
         <div class="project-copy">
           <p class="eyebrow accent">01 / CHEMISTRY EXPLORATION</p>
           <h3 id="chemspec-title">ChemSpec</h3>
@@ -55,7 +58,7 @@
       </article>
 
       <div class="project-pair">
-        <article class="project" aria-labelledby="ch720-title">
+        <article class="project" aria-labelledby="ch720-title" data-reveal data-interactive>
           <p class="eyebrow accent">02 / NATIVE LINUX TOOL</p>
           <h3 id="ch720-title">CH720 Control</h3>
           <p>Headphone controls, directly on Linux. A native app for Sony WH-CH720N headphones that talks to the device over Bluetooth.</p>
@@ -64,7 +67,7 @@
           <div class="project-links"><a href="https://github.com/aryansx/sony-ch720n-control/releases">Download</a><a href="https://github.com/aryansx/sony-ch720n-control">Source code</a></div>
         </article>
 
-        <article class="project" aria-labelledby="chat-title">
+        <article class="project" aria-labelledby="chat-title" data-reveal data-interactive>
           <p class="eyebrow accent">03 / A-LEVEL COMPUTER SCIENCE NEA</p>
           <h3 id="chat-title">Chat Application</h3>
           <p>A chat application I built for my A-level Computer Science Non-Exam Assessment.</p>
@@ -76,22 +79,22 @@
     </section>
 
     <section class="about page-width" id="about" aria-labelledby="about-title">
-      <div class="section-heading"><h2 id="about-title">A LITTLE ABOUT ME</h2><span class="eyebrow">THE PERSON BEHIND THE PROJECTS</span></div>
+      <div class="section-heading" data-reveal><h2 id="about-title">A LITTLE ABOUT ME</h2><span class="eyebrow">THE PERSON BEHIND THE PROJECTS</span></div>
       <div class="about-grid">
-        <p class="about-text">I'm Aryan, an undergraduate student studying Computer Science &amp; Artifical Intelligence, I love to build things as a solution to problems I encounter.</p>
-        <div class="toolkit">
+        <p class="about-text" data-reveal>I'm Aryan, an undergraduate student studying Computer Science &amp; Artifical Intelligence, I love to build things as a solution to problems I encounter.</p>
+        <div class="toolkit" data-reveal>
           <h3 class="eyebrow">MY TOOLKIT</h3>
           <ul class="toolkit-list"><li>Rust</li><li>Python</li><li>C#</li><li>TypeScript</li><li>Linux</li></ul>
         </div>
       </div>
     </section>
 
-    <section class="contact page-width" id="contact" aria-labelledby="contact-title">
+    <section class="contact page-width" id="contact" aria-labelledby="contact-title" data-reveal>
       <div><p class="eyebrow">PROJECTS / CODE / CONVERSATION</p><h2 id="contact-title">FIND ME ON<br><span class="accent">GITHUB.</span></h2></div>
       <a class="button button-outline" href="https://github.com/aryansx">@aryansx</a>
     </section>
   </main>
 
-  <footer class="site-footer page-width"><span>© 2026 ARYAN SAINI</span><span>BUILD SOMETHING USEFUL. LEARN SOMETHING NEW. REPEAT.</span><a href="#main">Back to top</a></footer>
+  <footer class="site-footer page-width"><span>© 2026 ARYAN SAINI</span><span>BUILD SOMETHING USEFUL. LEARN SOMETHING NEW. REPEAT.</span><button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button><a href="#main">Back to top</a></footer>
 </body>
 </html>
